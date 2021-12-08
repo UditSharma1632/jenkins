@@ -12,17 +12,6 @@ node {
                 bat "mvn package"
     }
     
-    stage('ansible') {
-                bat "- hosts: 172.17.0.3
-  tasks:
-    - maven_artifact:
-        group_id: com.maven.demo
-        artifact_id: jenkins
-        repository_url: 'http://localhost:8081/repository/nexus-demo/'
-        username: admin
-        password: November@2021
-        dest: /etc/ansible/hosts"
-    }
     
     stage('Nexus') {
         nexusArtifactUploader artifacts: [[artifactId: 'jenkins', classifier: '', file: 'target/jenkins-1.0.0-SNAPSHOT.jar', type: 'jar']], 
