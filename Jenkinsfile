@@ -13,7 +13,7 @@ node {
     }
     
     stage('ansible') {
-                ansiblePlaybook(inventory: 'hosts', playbook: 'artifact.yml')
+                ansiblePlaybook(inventory: 'inventory.inv', playbook: 'artifact.yml')
     }
     
     
