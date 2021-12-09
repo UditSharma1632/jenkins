@@ -1,0 +1,9 @@
+- hosts: 172.17.0.2
+  tasks:
+    - maven_artifact:
+        group_id: com.maven.demo
+        artifact_id: jenkins
+        repository_url: 'http://localhost:8081/repository/nexus-demo/'
+        username: admin
+        password: November@2021
+        dest: /download
