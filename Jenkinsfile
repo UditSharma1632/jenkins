@@ -13,7 +13,7 @@ node {
     }
     
     stage('ansible') {
-                ansiblePlaybook(inventory: 'inventory.inv', playbook: 'playbook.yml')
+                ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory.inv', playbook: 'playbook.yml'
     }
     
     
