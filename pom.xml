@@ -9,6 +9,23 @@
   <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   
+  <build>
+     <distributionManagement>
+     <repositories>
+    <repository>
+      <id>nexus</id>
+      <name>Releases</name>
+      <url>http://localhost:8110/repository/maven-releases/</url>
+    </repository>
+      <repository>
+        <id>nexus</id>
+        <name>Snapshots</name>
+        <url>ttp://localhost:8110/repository/maven-snapshots/</url>
+      </repository>
+    </repositories>
+  </distributionManagement> 
+   </build>
+  
   <dependencies>
   <dependency>
     <groupId>junit</groupId>
@@ -25,20 +42,6 @@
 
 </dependencies>
   
-  <distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <name>Releases</name>
-      <url>http://localhost:8110/repository/maven-releases/</url>
-    </repository>
-    <repositories>
-      <repository>
-        <id>nexus</id>
-        <name>Snapshots</name>
-        <url>ttp://localhost:8110/repository/maven-snapshots/</url>
-      </repository>
-    </repositories>
-  </distributionManagement> 
-
+ 
 
 </project>
