@@ -28,13 +28,13 @@
   <distributionManagement>
     <repository>
       <id>nexus</id>
-      <name>Releases</name>
+      <name>releases</name>
       <url>http://localhost:8110/repository/maven-releases/</url>
     </repository>
     <repositories>
       <repository>
         <id>nexus</id>
-        <name>Snapshot</name>
+        <name>snapshots</name>
         <url>ttp://localhost:8110/repository/maven-snapshots/</url>
       </repository>
     </repositories>
