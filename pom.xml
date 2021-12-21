@@ -10,18 +10,16 @@
   </properties>
   
      <distributionManagement>
-     <repositories>
     <repository>
       <id>nexus</id>
       <name>Releases</name>
       <url>http://localhost:8110/repository/maven-releases/</url>
     </repository>
-      <repository>
+      <snapshotRepository>
         <id>nexus</id>
         <name>Snapshots</name>
         <url>ttp://localhost:8110/repository/maven-snapshots/</url>
-      </repository>
-    </repositories>
+      </snapshotRepository>
   </distributionManagement> 
   
   <dependencies>
