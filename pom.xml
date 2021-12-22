@@ -38,17 +38,5 @@
 
 </dependencies>
   
-  <build>
-            <executions>
-                <execution>
-                    <phase>package</phase> <!-- append to the packaging phase. -->
-                    <goals>
-                        <goal>single</goal> <!-- goals == mojos -->
-                    </goals>
-                </execution>
-            </executions>
-   </build>
-  
- 
 
 </project>
