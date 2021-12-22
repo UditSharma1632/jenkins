@@ -4,13 +4,10 @@ node {
         git 'https://github.com/UditSharma1632/jenkins.git'
         
     }
-    stage('Build') {
-                bat "mvn clean test"
+    stage('Build and Package') {
+                bat "mvn clean package"
     }
-    
-    stage('Package') {
-                bat "mvn package"
-    }    
+     
     
     stage('Nexus') {
         nexusArtifactUploader artifacts: [[artifactId: 'jenkins', classifier: '', file: 'target/jenkins-1.0.0-SNAPSHOT.jar', type: 'jar']], 
