@@ -39,8 +39,6 @@
 </dependencies>
   
   <build>
-    <plugins>
-        <plugin>
             <executions>
                 <execution>
                     <phase>package</phase> <!-- append to the packaging phase. -->
@@ -49,8 +47,6 @@
                     </goals>
                 </execution>
             </executions>
-        </plugin>
-    </plugins>
    </build>
   
  
