@@ -10,17 +10,11 @@
   </properties>
   
      <distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <name>Releases</name>
-      <url>http://localhost:8110/repository/maven-releases/</url>
-    </repository>
-      <snapshotRepository>
-        <id>nexus</id>
-        <name>Snapshots</name>
-        <url>http://localhost:8110/repository/maven-snapshots/</url>
-      </snapshotRepository>
-  </distributionManagement> 
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://localhost:8110/nexus/content/repositories/snapshots</url>
+   </snapshotRepository>
+</distributionManagement>
   
   <plugin>
    <groupId>org.sonatype.plugins</groupId>
