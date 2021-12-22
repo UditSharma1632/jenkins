@@ -8,6 +8,9 @@ node {
                 bat "mvn clean package"
     }
      
+     stage('Deploy') {
+                bat "mvn deploy"
+    }
     
     stage('Nexus') {
         nexusArtifactUploader artifacts: [[artifactId: 'jenkins', classifier: '', file: 'target/jenkins-1.0.0-SNAPSHOT.jar', type: 'jar']], 
