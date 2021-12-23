@@ -11,18 +11,19 @@
   
     <distributionManagement>
 	<repository>
-		<id>nexus-repo</id>
+		<id>nexus</id>
 		<name>Artifact</name>
 		<url>http://localhost:8110/repository/nexus-repo/</url>
 	</repository>
  
 	<snapshotRepository>
-		<id>nexus-repo</id>
+		<id>nexus</id>
 		<name>Artifact</name>
 		<url>http://localhost:8110/repository/nexus-repo//</url>
 	</snapshotRepository>
 
 </distributionManagement>
+
   
   
   <dependencies>
