@@ -5,7 +5,7 @@ node {
         
     }
     stage('Build and Package') {
-                bat "mvn clean package"
+                sh "mvn clean package"
     }
      
     stage('Nexus') {
