@@ -5,7 +5,7 @@ node {
         
     }
     stage('Build and Package') {
-                bat "mvn clean package"
+                sh "mvn clean package"
     }
      
     stage('Nexus') {
@@ -14,8 +14,10 @@ node {
             protocol: 'http', repository: 'nexus-repo', version: '1.0.0'
     }
     
-      stage('Deploy') {
-                bat "mvn deploy"
+     stage('Executing Playbook') { 
+                ansiblePlaybook (credentialsId: 'id_rsa', disableHostKeyChecking: true,
+                                 installation: 'ansible', inventory: 'inventory.inv', playbook: 'playbook.yml')
+        
     }
     
 }
