@@ -13,13 +13,13 @@
 	<repository>
 		<id>nexus</id>
 		<name>Artifact</name>
-		<url>http://host.docker.internal:8110/repository/nexus-repo/</url>
+		<url>http://localhost:8110/repository/nexus-repo/</url>
 	</repository>
  
 	<snapshotRepository>
 		<id>nexus</id>
 		<name>Artifact</name>
-		<url>http://host.docker.internal:8110/repository/nexus-repo//</url>
+		<url>http://localhost:8110/repository/nexus-repo//</url>
 	</snapshotRepository>
 
 </distributionManagement>
