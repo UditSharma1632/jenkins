@@ -10,11 +10,13 @@ node {
      
     stage('Nexus') {
         nexusArtifactUploader artifacts: [[artifactId: 'jenkins', classifier: '', file: 'target/jenkins-1.0.0.jar', type: 'jar']], 
-            credentialsId: 'jenkins', groupId: 'com.maven.demo', nexusUrl: 'localhost:8110', nexusVersion: 'nexus3', 
+            credentialsId: 'Nexus', groupId: 'com.maven.demo', nexusUrl: 'localhost:8110', nexusVersion: 'nexus3', 
             protocol: 'http', repository: 'nexus-repo', version: '1.0.0'
     }
     
-    stage('ansible') {
-                ansiblePlaybook(credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible_master', inventory: 'inventory.inv', playbook: 'playbook.yml')
+   stage('Executing Playbook') { 
+                ansiblePlaybook (credentialsId: 'id_rsa', disableHostKeyChecking: true,
+                                 installation: 'ansible', inventory: 'inventory.inv', playbook: 'playbook.yml')
+        
     }
 }
