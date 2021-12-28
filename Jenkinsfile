@@ -5,7 +5,7 @@ node {
         
     }
     stage('Build and Package') {
-                sh "mvn clean package"
+                bat "mvn clean package"
     }
      
     stage('Nexus') {
@@ -15,12 +15,7 @@ node {
     }
     
       stage('Deploy') {
-                sh "mvn deploy"
+                bat "mvn deploy"
     }
     
-   stage('Executing Playbook') { 
-                ansiblePlaybook (credentialsId: 'id_rsa', disableHostKeyChecking: true,
-                                 installation: 'ansible', inventory: 'inventory.inv', playbook: 'playbook.yml')
-        
-    }
 }
