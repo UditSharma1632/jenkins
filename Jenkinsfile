@@ -14,10 +14,5 @@ node {
             protocol: 'http', repository: 'nexus-repo', version: '1.0.0'
     }
     
-     stage('Executing Playbook') { 
-                ansiblePlaybook (credentialsId: 'id_rsa', disableHostKeyChecking: true,
-                                 installation: 'ansible', inventory: 'inventory.inv', playbook: 'playbook.yml')
-        
-    }
     
 }
